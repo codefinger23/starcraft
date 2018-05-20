@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>啥叫动效</title>
+</head>
+<style>
+    .title {
+        display: block;
+        width : 128px;
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 45px;
+        transition: color 1s linear;
+    }
+    .title.active {
+        color: #409eff;
+        transition: color 1s linear;
+    }
+    /* 因为下划线是要变长的效果，所以需要内嵌div层的方式，通过变化宽度来实现 */
+    .underline.active{
+        color : #409eff;
+        width: 128px;
+        border-bottom: 5px solid #409eff;
+        transition: width 1s linear;
+    }
+    .underline{
+        width: 0px;
+        color : #409eff;
+        border-bottom: 5px solid #409eff;
+        transition: width 1s linear;
+    }
+    .botton {
+        width:fit-content;
+        border: 1px solid;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 8px;
+        box-shadow:5px 5px 10px black;
+        font-weight:bold;
+    }
+    .botton:active{
+        background-color: #409eff;
+    }
+</style>
+<body>
+    <div align="center">
+        <div class="title">
+            前端学院
+            <div class="underline"></div>
+        </div>
+        <div class="botton" onclick="changeStyle()">切换样式</button>
+    </div>
+    <script>
+        function changeStyle() {
+            var under = document.getElementsByClassName("underline")[0];
+            var tlt = document.getElementsByClassName("title")[0];
+            if(tlt.classList[tlt.classList.length-1] == "active") {
+                tlt.classList.remove("active");
+            } else {
+                tlt.classList.add("active");
+            }
+            if(under.classList[under.classList.length-1] == "active") {
+                under.classList.remove("active");
+            } else {
+                under.classList.add("active");
+            }
+        }
+    </script>
+</body>
+</html>
