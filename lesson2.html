@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2B 变形</title>
+</head>
+<style>
+    /* 原始图形 */
+    .box0 {
+        position: relative;
+        text-align: center;
+        width: 3.5em;
+        height: 3.5em;
+        line-height: 3.5em;
+        box-shadow: 0 1px 4px 1px rgba(0,0,0,.08) inset;
+        display: inline-block;
+        background-color: #f5f5f5;
+    }
+    /* 向左倾斜30deg */
+    .box1 {
+        position: relative;
+        left: 2em;
+        text-align: center;
+        width: 3.5em;
+        height: 3.5em;
+        line-height: 3.5em;
+        box-shadow: 0 1px 4px 1px rgba(0,0,0,.08) inset;
+        background-color: #f5f5f5;
+        display: inline-block;
+        transform:skewX(30deg);
+    }
+    /* X轴压缩两倍 */
+    .box2 {
+        position: relative;
+        left: 3em;
+        text-align: center;
+        width: 3.5em;
+        height: 3.5em;
+        line-height: 3.5em;
+        box-shadow: 0 1px 4px 1px rgba(0,0,0,.08) inset;
+        background-color: #f5f5f5;
+        display: inline-block;
+        transform:scaleX(0.5);
+    }
+    /* 旋转45deg */
+    .box3 {
+        position: relative;
+        left: 3em;
+        text-align: center;
+        width: 3.5em;
+        height: 3.5em;
+        line-height: 3.5em;
+        box-shadow: 0 1px 4px 1px rgba(0,0,0,.08) inset;
+        background-color: #f5f5f5;
+        display: inline-block;
+        transform:rotate(45deg);
+    }
+    /* X轴位移10px, Y轴位移20px */
+    .box4 {
+        position: relative;
+        left: 3em;
+        text-align: center;
+        width: 3.5em;
+        height: 3.5em;
+        line-height: 3.5em;
+        box-shadow: 0 1px 4px 1px rgba(0,0,0,.08) inset;
+        background-color: #f5f5f5;
+        display: inline-block;
+        transform: translate(10px, 20px);
+    }
+    /* 旋转45deg */
+    .box5 {
+        position: relative;
+        left: 5em;
+        text-align: center;
+        width: 3.5em;
+        height: 3.5em;
+        line-height: 3.5em;
+        box-shadow: 0 1px 4px 1px rgba(0,0,0,.08) inset;
+        background-color: #f5f5f5;
+        display: inline-block;
+        transform: skewX(30deg) scaleX(0.5) rotate(45deg) translate(10px, 20px);
+    }
+</style>
+<body>
+    <div class="box0">
+        box0
+    </div>
+    <div class="box1">
+        box1
+    </div>
+    <div class="box2">
+        box2
+    </div>
+    <div class="box3">
+        box3
+    </div>
+    <div class="box4">
+        box4
+    </div>
+    <div class="box5">
+        box5
+    </div>
+</body>
+</html>
