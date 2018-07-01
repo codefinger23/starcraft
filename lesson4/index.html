@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>这是个很现实的动效</title>
+    <style type="text/css">
+        .card {
+            background-image: url("front.jpg");
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            width: 250px;
+            height: 350px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            transition: transform 1s, background-image 1s;
+        }
+        .card:hover {
+            background-image: url("back.jpg");
+            transform: perspective(600px) rotateY(180deg) translateX(50%);
+            transition: transform 1s, background-image 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+        </div>
+    </div>
+</body>
+</html>
