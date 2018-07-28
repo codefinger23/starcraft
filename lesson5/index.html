@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>黑了咕咚</title>
+</head>
+<style>
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+        background: black;
+    }
+    .container {
+        background: black;
+        height: 100%;
+        width: 100%;
+    }
+    .cube {
+        perspective: 2000px;
+        transform-style: preserve-3d;
+        margin-left: -125px;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+    }
+    .square {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        border:5px solid rgb(30,140,242);
+        background-color:rgb(19,67,113);
+    }
+    .top {
+        transform: rotateX(90deg) translateY(125px);
+    }
+    .bottom {
+        transform: rotateX(-90deg) translateY(125px);
+    }
+    .front {
+        transform: rotateY(0deg) translateZ(125px);
+    }
+    .back {
+        transform: rotateY(180deg) translateZ(125px);
+    }
+    .left {
+        transform: rotateY(90deg) translateX(125px);
+    }
+    .right {
+        transform: rotateY(270deg) translateX(125px);
+        
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="cube">
+            <div class="square top"></div>
+            <div class="square bottom"></div>
+            <div class="square front"></div>
+            <div class="square back"></div>
+            <div class="square left"></div>
+            <div class="square right"></div>
+        </div>
+    </div>
+</body>
+</html>
