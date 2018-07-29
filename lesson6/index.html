@@ -10,15 +10,164 @@
         margin: 0px;
     }
     .container {
-        background-image: url("./earth.jpg");
         width: 100%;
         height: 100%;
+        position: relative;
+		overflow: hidden;
+    }
+    .arena img {
+        position: absolute;
+        width: 100%;
+    }
+    .kim {
+        background-image: url("./kim.jpg");
         background-repeat:no-repeat;
         background-size: 100%;
+        width: 100%;
+        height: 100%;
+    }
+    .wood {
+        background-image: url("./wood.jpg");
+        background-repeat:no-repeat;
+        background-size: 100%;
+        width: 100%;
+        height: 100%;
+        transform: translateY(350px);
+    }
+    .water {
+        background-image: url("./water.jpg");
+        background-repeat:no-repeat;
+        background-size: 100%;
+        width: 100%;
+        height: 100%;
+    }
+    .fire {
+        background-image: url("./fire.jpg");
+        background-repeat:no-repeat;
+        background-size: 100%;
+        width: 100%;
+        height: 100%;
+    }
+    .earth {
+        background-image: url("./earth.jpg");
+        background-repeat:no-repeat;
+        background-size: 100%;
+        width: 100%;
+        height: 100%;
+    }
+    .console {
+		position: fixed;
+		bottom: 0;
+		padding: 0;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		list-style: none;
+		z-index: 3;
+	}
+
+	.console a{
+		width: 15%;
+		height: 350px;
+		overflow: hidden;
+	}
+
+	.console a img{
+		width: 100%;
+		filter: brightness(0.6);
+	}
+
+	.console a img:hover{
+		width: 100%;
+		filter: brightness(1);
+	}
+    #kim:target img{
+        animation: 0.5s ease-out kim;
+        z-index: 2;
+    }
+    #wood:target img{
+        animation: 0.5s ease-out wood;
+        z-index: 2;
+    }
+    #water:target img{
+        animation: 1s ease-in water;
+        z-index: 2;
+    }
+    #fire:target img{
+        animation: 1s ease-out fire;
+        z-index: 2;
+    }
+    #earth:target img{
+        animation: 0.7s ease-in-out earth;
+        z-index: 2;
+    }
+    @keyframes kim{
+        0% {
+            transform: translateX(-500px);
+        }
+        100% {
+            transform: translateX(0px);
+        }
+    }
+    @keyframes wood{
+        0% {
+            transform: translateY(350px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+    @keyframes water{
+        0% {
+            transform: scale(0.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    @keyframes fire{
+        0% {
+            transform: scale(2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    @keyframes earth{
+        0% {
+            transform: scale(0.1) rotate(-360deg);
+        }
+        100% {
+            transform: scale(1) rotate(0deg);
+        }
     }
 </style>
 <body>
     <div class="container">
+        <div class="arena">
+            <div id="kim">
+                <img src="./kim.jpg">
+            </div>
+            <div id="wood">
+                <img src="./wood.jpg">
+            </div>
+            <div id="water">
+                <img src="./water.jpg">
+            </div>
+            <div id="fire">
+                <img src="./fire.jpg">
+            </div>
+            <div id="earth">
+                <img src="./earth.jpg">
+            </div>
+        </div>
+        <div class="console">
+            <a href="#kim"><img src="./kim.jpg"></a>
+            <a href="#wood"><img src="./wood.jpg"></a>
+            <a href="#water"><img src="./water.jpg"></a>
+            <a href="#fire"><img src="./fire.jpg"></a>
+            <a href="#earth"><img src="./earth.jpg"></a>
+        </div>
     </div>
 </body>
 </html>
